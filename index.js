@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
+const serverless = require('serverless-http');
 
 // create express app
 const app = express();
@@ -34,3 +35,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log('Bot is listening on port ' + PORT);
 });
+
+module.exports.handler = serverless(app);
