@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.send('hello world')
+  // seamus fix this
 
   // let date = get current day of the week / date
   
